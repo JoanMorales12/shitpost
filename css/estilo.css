@@ -1,0 +1,62 @@
+*{
+	padding: 0;
+	margin: 0;
+	font-family: 'Patua One', cursive;
+	color: white;
+}
+body{
+	background-image: url(../img/84248.png);
+	background-attachment: fixed;
+	background-size: cover;
+	position: relative;
+
+}
+footer{
+	width: 100%;
+	height: 100px;
+	background-color: #9bdeac;
+	display: block;
+	padding:  20px;
+
+}
+#i{
+	width: 200px;
+	height: 250px;
+}
+
+#Nv{
+	width: 100%;
+	height: 80px;
+	background-color: #e7305b;
+	padding: 15px;
+	margin-bottom: 15px;
+}
+#No{
+	color: #f7f5dd;
+	margin-top: 30px;
+
+
+}
+#Foo{
+	width: 45%;
+	height: 80%;
+	float: left;
+}
+#xd{
+	width: 30%;
+	height: 90%;
+	display: inline-block;
+	margin-left: 250px;
+}
+#i{
+	height: 100px;
+	width: 80px;
+}
+#enc{
+	font-size: 50px;
+}
+#cue{
+	height: 300px;
+	width: 100%;
+	padding: 40px;
+}

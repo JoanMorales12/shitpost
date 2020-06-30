@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<link rel="stylesheet" type="text/css" href="css/estilo.css">
+	<link href="https://fonts.googleapis.com/css2?family=Patua+One&family=Holtwood+One+SC&family=Pangolin&family=Yellowtail&display=swap" rel="stylesheet">
+	<meta charset="utf-8">
+	<title>Generador de tarjetas</title>
+</head>
+<body id="" >
+<nav id="Nv">
+		<a href="index.html" style="text-decoration: none;"><span id="name"><h1 id="No">Joan Morales</h1></a>
+	</nav>
+	<center><h1 id="enc">¡Crea tu tarjeta!</h1></center>
+	<form name="tarjeta" id="opciones" action="#" method="post" style="margin-left: 200px" > 
+		<img src="img/glass_lens_loupe_love_magnifying_search_zoom_icon_146722.png" width="5%"><h2>Elige un tema:</h2>
+		<br><br>
+	<label style="margin-left: 100px;" >
+<input type="radio" name="tipoT" id="sv" value="unoo"> San Valentin</label>
+<label style="margin-left: 200px;" >
+<input type="radio" name="tipoT" id="fc" value="doss"> Feliz Cumpleaños </label>
+<label style="margin-left: 300px;" >
+<input type="radio" name="tipoT" id="mot" value="tress">Motivación  </label>
+
+</form>
+<br><br>
+
+<form name=imagen style="margin-left: 200px" > 
+		<img src="img/letter_love_mail_message_post_wings_valentine_icon_146720.png" width="5%" ><h2>Elige una imagen:</h2>
+		<br><br>
+		<img src="img/san-valentin-655x368-1.jpg" width="30%" height="30%" id="imagen1">
+		<img src="img/cumpleaños.jpg" width="30%" height="30%" id="imagen2" style="margin-left: 30px;">
+		<img src="img/motivacion_laboral1.png" width="30%" height="30%" id="imagen3" style="margin-left: 30px;"><br><br>
+		<label style="margin-left: 100px;"   >
+<input type="Radio" name="imagenes" value="imagen1"   id="imageN1"> San Valentin </label>
+<label style="margin-left: 200px;">
+<input type="Radio" name="imagenes" value="imagen2"  id="imageN2"> Feliz Cumpleaños </label>
+<label style="margin-left: 300px;">
+<input type="Radio" name="imagenes" value="imagen3"  id="imageN3"> Motivación 
+</label>
+
+
+</form>
+<br><br>
+<form name=texto style="margin-left: 300px" > 
+		<img src="img/draw_edit_heart_line_pen_writing_icon_146731.png"  width="5%" style="float: left;"><h1>Contenido</h1><br>
+		
+		<textarea placeholder="Escribe aquí el mensaje." name="Area" id="ariatxt" rows="11" cols="50" style="float: right;margin-right: 300px;"></textarea>
+
+
+<input type="text" name="Titulo"  placeholder="Escribe un título" id="tittle"> <br><br><br><br>
+
+<input type="text" name="Subtitulo"  placeholder="Escribe un subtítulo" id="subtittle"> <br> <br><br><br>
+
+<input type="text" name="Nombre" placeholder="Escribe el nombre de la persona" id="pernom">
+
+
+</form>
+
+<br><br>
+<form name=texto style="margin-left: 300px" > 
+		<img src="img/alcohol_bar_bottle_champagne_drink_romantic_toast_icon_146713.png" width="5%" style="float: left;"><h1>Color</h1>
+		<input type="color" name="color" id="bg" style="margin-left: 50px;">
+		<button type="button" onclick="Generar();" style="float: right; color: black; margin-right: 400px;height: 50px;width: 200px;margin-bottom: 100px;">Generar</button>
+
+
+</form>
+<script type="text/javascript">
+	function Generar(){
+		var Titu,Stitu,Aria,Prn,Cam,Autor,Fecha;
+		
+		Titu=document.getElementById("tittle").value;
+		Stitu=document.getElementById("subtittle").value;
+		Aria=document.getElementById("ariatxt").value;
+		Prn=document.getElementById("pernom").value;
+		Cam=document.getElementById("bg").value;
+		Autor=prompt("Ingresa tu nombre");
+		Fecha=new Date();
+
+			
+	
+		if(document.getElementById("sv").checked == true){
+			
+			if(document.getElementById("imageN1").checked == true){
+				
+				document.write('<article style="font-family: Yellowtail, cursive; color: red; text-align: center;">'+'<audio src="media/lPppXzTYeIY.mp3" autoplay="" loop>'+'</audio>'+'<h1 style="font-size: 50px; text-align: center;">'+Titu+'</h1>'+'<h2 style="font-size: 40px; text-align: center;">'+Stitu+'</h2>'+'<br>'+'<img src="img/san-valentin-655x368-1.jpg" width="70%" height="60%">'+'<br>'+'<p style="text-align: center;">'+Aria+'</p>'+'<br>'+'<br>'+"Con cariño, "+Prn+"."+'<br>'+'<h3 style="float: right;">'+Autor+'</h3>'+'<h3 style="float:left;">'+Fecha+'</h3>'+'</article>');
+		
+		document.body.style.backgroundColor=Cam;
+		
+}
+	else if(document.getElementById("imageN2").checked == true){
+
+		document.write('<article style="font-family: Yellowtail, cursive; color: red; text-align: center;">'+'<audio src="media/lPppXzTYeIY.mp3" autoplay="" loop>'+'</audio>'+'<h1 style="font-size: 50px; text-align: center;">'+Titu+'</h1>'+'<h2 style="font-size: 40px; text-align: center;">'+Stitu+'</h2>'+'<br>'+'<img src="img/cumpleaños.jpg" width="70%" height="60%">'+'<br>'+'<p style="text-align: center;">'+Aria+'</p>'+'<br>'+'<br>'+"Con cariño, "+Prn+"."+'<br>'+'<h3 style="float: right;">'+Autor+'</h3>'+'<h3 style="float:left;">'+Fecha+'</h3>'+'</article>');
+		document.body.style.backgroundColor=Cam;
+}
+else if(document.getElementById("imageN3").checked == true){
+
+		document.write('<article style="font-family:Yellowtail, cursive; color: red; text-align: center;">'+'<audio src="media/lPppXzTYeIY.mp3" autoplay="" loop>'+'</audio>'+'<h1 style="font-size: 50px; text-align: center;">'+Titu+'</h1>'+'<h2 style="font-size: 40px; text-align: center;">'+Stitu+'lPppXzTYeIY.mp3</h2>'+'<br>'+'<img src="img/motivacion_laboral1.png" width="70%" height="60%">'+'<br>'+'<p style="text-align: center;">'+Aria+'</p>'+'<br>'+'<br>'+"Con cariño, "+Prn+"."+'<br>'+'<h3 style="float: right;">'+Autor+'</h3>'+'<h3 style="float:left;">'+Fecha+'</h3>'+'</article>');
+		document.body.style.backgroundColor=Cam;
+}
+
+	}
+
+	else if(document.getElementById("fc").checked == true){
+			if(document.getElementById("imageN1").checked == true){
+
+		document.write('<article style="font-family:Pangolin, cursive; color: gray; text-align: center;">'+'<audio src="media/KnGLsX5c.mp3" autoplay="" loop>'+'</audio>'+'<h1 style="font-size: 50px; text-align: center;">'+Titu+'</h1>'+'<h2 style="font-size: 40px; text-align: center;">'+Stitu+'</h2>'+'<br>'+'<img src="img/san-valentin-655x368-1.jpg" width="70%" height="60%">'+'<br>'+'<p style="text-align: center;">'+Aria+'</p>'+'<br>'+'<br>'+"Con cariño, "+Prn+"."+'<br>'+'<h3 style="float: right;">'+Autor+'</h3>'+'<h3 style="float:left;">'+Fecha+'</h3>'+'</article>');
+		document.body.style.backgroundColor=Cam;
+}
+	else if(document.getElementById("imageN2").checked == true){
+
+		document.write('<article style="font-family: Pangolin, cursive; color: gray; text-align: center;">'+'<audio src="media/KnGLsX5c.mp3" autoplay="" loop>'+'</audio>'+'<h1 style="font-size: 50px; text-align: center;">'+Titu+'</h1>'+'<h2 style="font-size: 40px; text-align: center;">'+Stitu+'</h2>'+'<br>'+'<img src="img/cumpleaños.jpg" width="70%" height="60%">'+'<br>'+'<p style="text-align: center;">'+Aria+'</p>'+'<br>'+'<br>'+"Con cariño, "+Prn+"."+'<br>'+'<h3 style="float: right;">'+Autor+'</h3>'+'<h3 style="float:left;">'+Fecha+'</h3>'+'</article>');
+		document.body.style.backgroundColor=Cam;
+}
+else if(document.getElementById("imageN3").checked == true){
+
+		document.write('<article style="font-family:Pangolin, cursive; color: gray; text-align: center;">'+'<audio src="media/KnGLsX5c.mp3" autoplay="" loop>'+'</audio>'+'<h1 style="font-size: 50px; text-align: center;">'+Titu+'</h1>'+'<h2 style="font-size: 40px; text-align: center;">'+Stitu+'</h2>'+'<br>'+'<img src="img/motivacion_laboral1.png" width="70%" height="60%">'+'<br>'+'<p style="text-align: center;">'+Aria+'</p>'+'<br>'+'<br>'+"Con cariño, "+Prn+"."+'<br>'+'<h3 style="float: right;">'+Autor+'</h3>'+'<h3 style="float:left;">'+Fecha+'</h3>'+'</article>');
+		document.body.style.backgroundColor=Cam;
+}
+
+	}
+
+	else if(document.getElementById("mot").checked == true){
+			if(document.getElementById("imageN1").checked == true){
+
+		document.write('<article style="font-family: Holtwood One SC, serif; color: yellow; text-align: center;">'+'<audio src="media/diB65scQU.mp3" autoplay="" loop>'+'</audio>'+'<h1 style="font-size: 50px; text-align: center;">'+Titu+'</h1>'+'<h2 style="font-size: 40px; text-align: center;">'+Stitu+'</h2>'+'<br>'+'<img src="img/san-valentin-655x368-1.jpg" width="70%" height="60%">'+'<br>'+'<p style="text-align: center;">'+Aria+'</p>'+'<br>'+'<br>'+"Con cariño, "+Prn+"."+'<br>'+'<h3 style="float: right;">'+Autor+'</h3>'+'<h3 style="float:left;">'+Fecha+'</h3>'+'</article>');
+		document.body.style.backgroundColor=Cam;
+}
+	else if(document.getElementById("imageN2").checked == true){
+
+		document.write('<article style="font-family: Holtwood One SC, serif; color: yellow; text-align: center;">'+'<audio src="media/diB65scQU.mp3" autoplay="" loop>'+'</audio>'+'<h1 style="font-size: 50px; text-align: center;">'+Titu+'</h1>'+'<h2 style="font-size: 40px; text-align: center;">'+Stitu+'</h2>'+'<br>'+'<img src="cumpleaños.jpg" width="70%" height="60%">'+'<br>'+'<p style="text-align: center;">'+Aria+'</p>'+'<br>'+'<br>'+"Con cariño, "+Prn+"."+'<br>'+'<h3 style="float: right;">'+Autor+'</h3>'+'<h3 style="float:left;">'+Fecha+'</h3>'+'</article>');
+		document.body.style.backgroundColor=Cam;
+}
+else if(document.getElementById("imageN3").checked == true){
+
+		document.write('<article style="font-family: font-family: Holtwood One SC, serif; color: yellow; text-align: center;">'+'<audio src="media/diB65scQU.mp3" autoplay="" loop>'+'</audio>'+'<h1 style="font-size: 50px; text-align: center;">'+Titu+'</h1>'+'<h2 style="font-size: 40px; text-align: center;">'+Stitu+'</h2>'+'<br>'+'<img src="img/motivacion_laboral1.png" width="70%" height="60%">'+'<br>'+'<p style="text-align: center;">'+Aria+'</p>'+'<br>'+'<br>'+"Con cariño, "+Prn+"."+'<br>'+'<h3 style="float: right;">'+Autor+'</h3>'+'<h3 style="float:left;">'+Fecha+'</h3>'+'</article>');
+		document.body.style.backgroundColor=Cam;
+}
+
+	}
+
+
+			
+	}
+</script>
+
+</style>
+<br><br><br>
+<footer>
+		<article id="Foo">
+			Joan Jafet Morales Ramos<br>
+			Correo: jmorales9315@gmail.com
+		</article>
+			<img id="i" src="img/IMG_20200212_185808978.jpg" alt="">
+	</footer>
+</body>
+</html>

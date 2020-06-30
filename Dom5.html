@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Bordes y DOM</title>
+</head>
+<body>
+	<section>
+			<figure>
+				<img id="imagen" src="img/uno.jpg" style=" border: 5px solid #f97300" title="prueba de bordes" width="400" heigh="300" />
+			</figure>
+	</section>
+		
+	<form name="formu">
+		 <input type="button" value="Ancho de 20px" onclick="setBorderWidth(20);"/>
+		 <input type="button" value="Ancho de 50px" onclick="setBorderWidth(50);"/>
+		<input type="button"  value="Borde doble" onclick="setbst1();"/>
+		<input type="button"  value="Borde punteado" onclick="setbst2();"/>
+		<input type="button"  value="Borde con guiones" onclick="setbst3();"/>
+		 <input type="color" name="color" id="bc">
+		 		 <input type="button" name="Cambiar color" onclick="setcolor();" value="Cambiar color">
+
+	</form>
+	<script type="text/javascript">
+		function setBorderWidth(ancho){
+			document.getElementById("imagen").style.borderWidth=ancho+"px"; 
+		}
+		function setbst1(){
+			document.getElementById("imagen").style.borderStyle="double";
+		}
+		function setbst2(){
+			document.getElementById("imagen").style.borderStyle="dotted";
+		}
+		function setbst3(){
+			document.getElementById("imagen").style.borderStyle="dashed";
+		}
+		function setcolor(){ 
+			var c;
+			c=document.getElementById("bc").value;
+			document.getElementById("imagen").style.borderColor=c;
+		}
+	</script>
+	
+</body>
+</html>
